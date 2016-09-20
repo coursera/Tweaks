@@ -175,13 +175,14 @@
   FBTweakCategory *category = _sortedCategories[indexPath.row];
   [_delegate tweakCategoryViewController:self selectedCategory:category];
 }
-
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE9_0
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
   if (buttonIndex != alertView.cancelButtonIndex) {
     [_store reset];
   }
 }
+#endif
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {

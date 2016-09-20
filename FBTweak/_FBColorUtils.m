@@ -45,7 +45,7 @@ extern HSB _FBRGB2HSB(RGB rgb)
 
 extern RGB _FBHSB2RGB(HSB hsb)
 {
-  double r, g, b;
+  double r = 0.0, g = 0.0, b = 0.0;
 
   int i = hsb.hue * 6;
   double f = hsb.hue * 6 - i;
