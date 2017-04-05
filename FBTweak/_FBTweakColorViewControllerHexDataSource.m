@@ -108,7 +108,6 @@
     return [UIColor blackColor];
   }
   unsigned int rgbValue = 0;
-
   NSScanner *scanner = [NSScanner scannerWithString:hexString];
   [scanner setScanLocation:1]; // bypass '#' character
   [scanner scanHexInt:&rgbValue];
